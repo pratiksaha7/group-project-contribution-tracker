@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Group Project Contribution Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+  <main class="login-wrapper">
+    <section class="login-info">
+      <p class="eyebrow">Software Engineering Lab Project</p>
+      <h1>Group Project Contribution Tracker</h1>
+      <p>
+        A mini frontend application for tracking project tasks, member
+        contribution, and transparent team evaluation.
+      </p>
+
+      <div class="login-points">
+        <span>Task tracking</span>
+        <span>Contribution reports</span>
+        <span>Local storage</span>
+      </div>
+    </section>
+
+    <section class="login-card">
+      <h2>Demo Login</h2>
+      <p class="muted">Use any username and password to continue.</p>
+
+      <form id="loginForm">
+        <label for="role">Select Role</label>
+        <select id="role">
+          <option value="">Choose role</option>
+          <option value="Admin">Admin</option>
+          <option value="Team Leader">Team Leader</option>
+          <option value="Team Member">Team Member</option>
+        </select>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <button type="submit">Login</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

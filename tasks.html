@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks - Group Project Contribution Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h1>GPCT</h1>
+      <p>Contribution Tracker</p>
+      <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="tasks.html">Tasks</a>
+        <a href="reports.html">Reports</a>
+        <a href="index.html">Logout</a>
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Task Management</p>
+          <h2>Add, update, and remove project tasks</h2>
+        </div>
+        <span class="role-pill" id="loggedRole">Demo User</span>
+      </header>
+
+      <main class="content">
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <h3>Add New Task</h3>
+              <p>Assign work to any team member and select the current status.</p>
+            </div>
+          </div>
+
+          <form id="taskForm" class="task-form">
+            <div class="form-grid">
+              <div>
+                <label for="taskName">Task Name</label>
+                <input type="text" id="taskName" placeholder="Example: Design database schema">
+              </div>
+
+              <div>
+                <label for="memberName">Assign To</label>
+                <select id="memberName">
+                  <option value="">Choose member</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="taskStatus">Task Status</label>
+                <select id="taskStatus">
+                  <option value="Pending">Pending</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Completed">Completed</option>
+                </select>
+              </div>
+
+              <button type="submit">Add Task</button>
+            </div>
+            <p id="taskMessage" class="message"></p>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <h3>Task List</h3>
+              <p>Edit status directly from the table or delete a task.</p>
+            </div>
+          </div>
+
+          <div class="table-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Assigned Member</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="taskTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer>Software Engineering Lab Project</footer>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

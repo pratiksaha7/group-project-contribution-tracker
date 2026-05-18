@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Group Project Contribution Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <h1>GPCT</h1>
+      <p>Contribution Tracker</p>
+      <nav>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="reports.html">Reports</a>
+        <a href="index.html">Logout</a>
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Project Objective</p>
+          <h2>Group Project Contribution Tracker</h2>
+        </div>
+        <span class="role-pill" id="loggedRole">Demo User</span>
+      </header>
+
+      <main class="content">
+        <section class="stats-grid">
+          <article class="stat-card">
+            <span>Total Tasks</span>
+            <strong id="totalTasks">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Completed Tasks</span>
+            <strong id="completedTasks">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Pending Tasks</span>
+            <strong id="pendingTasks">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Team Progress</span>
+            <strong id="progressNumber">0%</strong>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <h3>Team Progress</h3>
+              <p>Overall completed tasks compared with total assigned tasks.</p>
+            </div>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+        </section>
+
+        <section class="two-column">
+          <div class="panel">
+            <div class="section-heading">
+              <div>
+                <h3>Recent Activities</h3>
+                <p>Latest task updates in the project workspace.</p>
+              </div>
+            </div>
+            <ul class="activity-list" id="activityList"></ul>
+          </div>
+
+          <div class="panel">
+            <div class="section-heading">
+              <div>
+                <h3>Team Information</h3>
+                <p>Five members participating in this lab project.</p>
+              </div>
+            </div>
+            <div class="team-list" id="teamList"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer>Software Engineering Lab Project</footer>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
